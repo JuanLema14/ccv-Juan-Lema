@@ -380,14 +380,10 @@
 </template>
 
 <script setup>
-import { ref, defineAsyncComponent, computed } from "vue";
-import { useQuasar } from "quasar";
-import { useRouter } from "vue-router";
+import { ref, computed } from "vue";
 
 const habilitiesCarsl = ref("1");
 
-const router = useRouter();
-const $q = useQuasar();
 const leftDrawerOpen = ref(true);
 
 const engVal = ref(70);
@@ -425,20 +421,5 @@ const servWebValLabel = computed(
 </script>
 
 <style lang="scss" scoped>
-.textoEmail {
-  font-size: 0.8vmax;
-}
 
-.settingsMenu {
-  width: 300px;
-  border-radius: 2em;
-  right: 1vmax;
-  top: 0vmax;
-  position: absolute;
-}
-
-.sectionShadow {
-  -webkit-box-shadow: -1px 14px 24px -5px rgba(57, 66, 196, 0.5);
-  box-shadow: -1px 14px 24px -5px rgba(11, 19, 138, 0.2);
-}
 </style>
