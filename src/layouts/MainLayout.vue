@@ -62,12 +62,12 @@
           <q-card-section>
             <div class="row">
               <div
-                class="col-lg-4 col-md-4 col-sm-6 col-xs-12 flex flex-center"
+                class="col-lg-6 col-md-6 col-sm-6 col-xs-12 flex flex-center"
               >
                 <q-circular-progress
                   rounded
                   show-value
-                  font-size="1vw"
+                  font-size="0.8vmax"
                   :value="engVal"
                   size="5vmax"
                   :thickness="0.2"
@@ -82,12 +82,12 @@
                 >
               </div>
               <div
-                class="col-lg-4 col-md-4 col-sm-6 col-xs-12 flex flex-center"
+                class="col-lg-6 col-md-6 col-sm-6 col-xs-12 flex flex-center"
               >
                 <q-circular-progress
                   rounded
                   show-value
-                  font-size="1vw"
+                  font-size="0.8vmax"
                   :value="espVal"
                   size="5vmax"
                   :thickness="0.2"
@@ -108,15 +108,16 @@
 
           <q-card-section>
             <q-carousel
-              fit
               v-model="habilitiesCarsl"
               transition-prev="scale"
               transition-next="scale"
-              swipeable
-              animated
               ref="carousel"
               control-color="warning"
               class="bg-transparent"
+              fit
+              swipeable
+              animated
+              style="height: 14vmax;"
             >
               <q-carousel-slide name="1" class="q-pt-xl">
                 <div class="row q-pa-sm">
@@ -184,11 +185,7 @@
                   </div>
                 </div>
 
-                <q-linear-progress
-                  rounded
-                  :value="wordPVal"
-                  color="warning"
-                />
+                <q-linear-progress rounded :value="wordPVal" color="warning" />
               </q-carousel-slide>
 
               <!--Carousel pt2 °°° -->
@@ -231,11 +228,7 @@
                   </div>
                 </div>
 
-                <q-linear-progress
-                  rounded
-                  :value="pythonVal"
-                  color="warning"
-                />
+                <q-linear-progress rounded :value="pythonVal" color="warning" />
 
                 <div class="row q-pa-sm">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -263,11 +256,7 @@
                   </div>
                 </div>
 
-                <q-linear-progress
-                  rounded
-                  :value="illustVal"
-                  color="warning"
-                />
+                <q-linear-progress rounded :value="illustVal" color="warning" />
               </q-carousel-slide>
 
               <!--Carousel pt3 °°° -->
@@ -275,7 +264,9 @@
               <q-carousel-slide name="3" class="q-pt-xl">
                 <div class="row q-pa-sm">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <span class="text-white text-weight-bolder">Servicios AWS:</span>
+                    <span class="text-white text-weight-bolder"
+                      >Servicios AWS:</span
+                    >
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 justify-end">
                     <span class="row justify-end text-white">{{
@@ -288,7 +279,9 @@
 
                 <div class="row q-pa-sm">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <span class="text-white text-weight-bolder">Automatización en Powershell:</span>
+                    <span class="text-white text-weight-bolder"
+                      >Automatización en Powershell:</span
+                    >
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 justify-end">
                     <span class="row justify-end text-white">{{
@@ -301,7 +294,9 @@
 
                 <div class="row q-pa-sm">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <span class="text-white text-weight-bolder">Administración de servidores web:</span>
+                    <span class="text-white text-weight-bolder"
+                      >Administración de servidores web:</span
+                    >
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 justify-end">
                     <span class="row justify-end text-white">{{
@@ -310,8 +305,11 @@
                   </div>
                 </div>
 
-                <q-linear-progress rounded :value="servWebVal" color="warning" />
-
+                <q-linear-progress
+                  rounded
+                  :value="servWebVal"
+                  color="warning"
+                />
               </q-carousel-slide>
 
               <!-- Controles °°° -->
@@ -343,6 +341,33 @@
                 </q-carousel-control>
               </template>
             </q-carousel>
+          </q-card-section>
+
+          <q-separator color="grey-8" />
+
+          <q-card-section>
+            <div class="row">
+              <div
+                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row justify-start"
+              >
+                <q-icon name="check" color="warning" class="q-pa-xs" />
+                <p class="text-grey-8">Lorem Ipsum dolor asit amet</p>
+              </div>
+
+              <div
+                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row justify-start"
+              >
+                <q-icon name="check" color="warning" class="q-pa-xs" />
+                <p class="text-grey-8">Lorem Ipsum dolor asit amet</p>
+              </div>
+
+              <div
+                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row justify-start"
+              >
+                <q-icon name="check" color="warning" class="q-pa-xs" />
+                <p class="text-grey-8">Lorem Ipsum dolor asit amet</p>
+              </div>
+            </div>
           </q-card-section>
         </q-card>
       </q-scroll-area>
@@ -394,7 +419,9 @@ const javaValLabel = computed(() => (javaVal.value * 100).toFixed(0) + "%");
 const illustValLabel = computed(() => (illustVal.value * 100).toFixed(0) + "%");
 const awsValLabel = computed(() => (awsVal.value * 100).toFixed(0) + "%");
 const pshellValLabel = computed(() => (pshellVal.value * 100).toFixed(0) + "%");
-const servWebValLabel = computed(() => (servWebVal.value * 100).toFixed(0) + "%");
+const servWebValLabel = computed(
+  () => (servWebVal.value * 100).toFixed(0) + "%"
+);
 </script>
 
 <style lang="scss" scoped>
