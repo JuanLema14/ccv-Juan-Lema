@@ -1,7 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="bg-dark">
-    <q-drawer v-model="leftDrawerOpen" class="bg-dark q-pa-sm">
+    <!-- <q-drawer v-model="leftDrawerOpen" class="bg-dark q-pa-sm">
       <q-scroll-area class="fit">
+
+      </q-scroll-area>
+    </q-drawer> -->
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
         <q-card class="bg-accent" flat square>
           <q-card-section>
             <div class="row flex flex-center">
@@ -117,7 +122,7 @@
               fit
               swipeable
               animated
-              style="height: 14vmax;"
+              style="height: 14vmax"
             >
               <q-carousel-slide name="1" class="q-pt-xl">
                 <div class="row q-pa-sm">
@@ -369,13 +374,47 @@
               </div>
             </div>
           </q-card-section>
-        </q-card>
-      </q-scroll-area>
-    </q-drawer>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+          <q-separator color="grey-8" />
+        </q-card>
+        <q-card class="bg-accent" flat square>
+          <q-car-section>
+            <div class="row q-pa-md">
+              <div class="col flex flex-center" style="cursor: pointer">
+                <q-btn
+                  round
+                  size="0.7vmax"
+                  flat
+                  href="https://github.com/JuanLema14/"
+                >
+                  <q-icon color="white" name="fab fa-github" />
+                </q-btn>
+              </div>
+              <div class="col flex flex-center" style="cursor: pointer">
+                <q-btn
+                  round
+                  size="0.7vmax"
+                  flat
+                  href="https://www.instagram.com/juanlemat/"
+                >
+                  <q-icon color="white" name="fab fa-instagram" />
+                </q-btn>
+              </div>
+              <div class="col flex flex-center" style="cursor: pointer">
+                <q-btn round size="0.7vmax" flat href="https://w.app/XomzdE">
+                  <q-icon color="white" name="fab fa-whatsapp" />
+                </q-btn>
+              </div>
+            </div>
+          </q-car-section>
+        </q-card>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <q-page-container>
+          <router-view />
+        </q-page-container>
+      </div>
+    </div>
   </q-layout>
 </template>
 
@@ -420,6 +459,4 @@ const servWebValLabel = computed(
 );
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
