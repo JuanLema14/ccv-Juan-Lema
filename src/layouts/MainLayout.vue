@@ -1,10 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="bg-dark">
-    <!-- <q-drawer v-model="leftDrawerOpen" class="bg-dark q-pa-sm">
-      <q-scroll-area class="fit">
-
-      </q-scroll-area>
-    </q-drawer> -->
     <div class="row">
       <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
         <q-card class="bg-accent" flat square>
