@@ -1,6 +1,6 @@
-# ccv Personal - Juan Lema (ccv-juan-lema)
+# cv Personal - Juan Lema (cv juan-lema)
 
-ccv
+cv
 
 ## Install the dependencies
 ```bash
